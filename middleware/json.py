@@ -5,7 +5,7 @@ class MediaTyperMiddleware:
     def process_request(self, req, resp):
         if not req.client_accepts_json:
             raise falcon.HTTPNotAcceptable(
-                'The API only supports responses encoded as JSON'
+                'Ra-work API only supports responses encoded as JSON'
             )
 
         if req.method in ('POST', 'PUT', 'PATCH'):
