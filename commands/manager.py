@@ -1,21 +1,21 @@
 from commands import DEFAULT_EXECUTE_COMMAND
-from commands.database import CREATE_DATABASE
+from commands.database import create_db
 
 
 class CommandManager:
-    command = None
-
     def __init__(self, arg):
         self.arg = self.check_command(arg)
 
     def check_command(self, command):
+        cmnd = None
         try:
-            if command == '-c':
-                command = CREATE_DATABASE
+            if command == 'createdb':
+                cmnd = create_db()
             if command == 'runserver':
+                cmnd = ''
                 print('runserver')
             else:
                 print(DEFAULT_EXECUTE_COMMAND)
         except IndexError:
             print(DEFAULT_EXECUTE_COMMAND)
-        return command
+        return cmnd
