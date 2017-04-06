@@ -1,0 +1,7 @@
+falcon
+sqlalchemy
+alembic
+marshmallow
+python-dotenv
+flake8
+isort
