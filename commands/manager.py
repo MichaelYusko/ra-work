@@ -1,5 +1,7 @@
+import sys
 from commands import DEFAULT_EXECUTE_COMMAND
 from commands.database import create_db
+from commands.server import start_server
 
 
 class CommandManager:
@@ -11,9 +13,9 @@ class CommandManager:
         try:
             if command == 'createdb':
                 cmnd = create_db()
+                sys.exit(1)
             if command == 'runserver':
-                cmnd = ''
-                print('runserver')
+                cmnd = start_server()
             else:
                 print(DEFAULT_EXECUTE_COMMAND)
         except IndexError:
