@@ -1,5 +1,10 @@
+import json
+
+
 class StaticResource:
     def on_get(self, req, resp):
-        resp.body = """
-        Dude, Ra-work will collect your time!
-        """
+        text = {
+            'User': 'Ra-worker',
+            'Text': 'Dude, I will collect your time!'
+        }
+        resp.body = json.dumps(text)
