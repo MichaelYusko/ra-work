@@ -12,7 +12,7 @@ def client():
     return testing.TestClient(create())
 
 
-def test_get_message(client):
+def test_home_resource(client):
     result = client.simulate_get('/')
     assert result.status_code == 200
     assert result.json
