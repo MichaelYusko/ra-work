@@ -1,7 +1,7 @@
 import pytest
-from app import api
 from falcon.testing import TestClient
 
+from app import api
 
 test_client_api = TestClient(api)
 
