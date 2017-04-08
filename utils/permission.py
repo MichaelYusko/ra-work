@@ -15,11 +15,11 @@ def is_authenticated(req, resp, resource, params):
 
 def is_manager(req, resp, resource, params):
     user = req.context['user']
-    if not (user.is_authenticated() and user.role == UserRole.customer.value):
+    if not (user.is_authenticated() and user.role == UserRole.MANAGER.value):
         raise falcon.HTTPUnauthorized(TITLE, DESCRIPTION, CHALLENGES)
 
 
 def is_employee(req, resp, resource, params):
     user = req.context['user']
-    if not (user.is_authenticated() and user.role == UserRole.employee.value):
+    if not (user.is_authenticated() and user.role == UserRole.EMPLOYEE.value):
         raise falcon.HTTPUnauthorized(TITLE, DESCRIPTION, CHALLENGES)
