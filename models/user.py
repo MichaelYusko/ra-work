@@ -1,3 +1,9 @@
+from enum import Enum
+
+
+class UserRole(Enum):
+    EMPLOYEE = 1
+    MANAGER = 2
 
 
 class AnonymousUser:
