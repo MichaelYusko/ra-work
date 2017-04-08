@@ -90,3 +90,5 @@ ENV/
 
 # Ignore idea files
 .idea
+
+.files
