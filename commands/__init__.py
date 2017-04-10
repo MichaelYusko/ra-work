@@ -1,5 +1,5 @@
 from .server import start_server
-from .database import create_db
+from .database import create_db, make_migrations
 from .test import test_check
 
 
@@ -20,3 +20,4 @@ DEFAULT_EXECUTE_COMMAND = 'Valid commands\n' + GREEN_COLOR + '\tcreatedb ' \
 CREATE_DATABASE = create_db
 START_SERVER = start_server
 TEST_CHECK = test_check
+MAKE_MIGRATIONS = make_migrations
