@@ -1,5 +1,5 @@
-from commands import (CREATE_DATABASE, DEFAULT_EXECUTE_COMMAND, START_SERVER,
-                      TEST_CHECK)
+from commands import (CREATE_DATABASE, DEFAULT_EXECUTE_COMMAND,
+                      MAKE_MIGRATIONS, START_SERVER, TEST_CHECK)
 
 
 class CommandManager:
@@ -7,7 +7,8 @@ class CommandManager:
     COMMANDS = {
         'runserver': START_SERVER,
         'createdb': CREATE_DATABASE,
-        'test-check': TEST_CHECK
+        'test-check': TEST_CHECK,
+        'makemigrations': MAKE_MIGRATIONS
     }
 
     def __init__(self, arg):
