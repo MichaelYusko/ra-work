@@ -1,10 +1,5 @@
-from db import engine
-from models import Base
+import subprocess as sb
 
 
 def create_db():
-    try:
-        print('Database created')
-        return Base.metadata.create_all(engine)
-    except Exception as e:
-        print('Failed: {}'.format(e))
+    sb.call('alembic upgrade head', shell=True)
